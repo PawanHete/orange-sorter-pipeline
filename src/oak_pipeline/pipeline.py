@@ -114,6 +114,8 @@ def build_pipeline():
     yolo_manip.initialConfig.setResize(config.YOLO_INPUT_SIZE, config.YOLO_INPUT_SIZE)
     yolo_manip.initialConfig.setKeepAspectRatio(False)
     yolo_manip.initialConfig.setFrameType(dai.ImgFrame.Type.BGR888p)  # planar BGR
+    # The default ImageManip limit is 1MB. 640x640x3 = 1.2MB, so we must raise the cap:
+    yolo_manip.setMaxOutputFrameSize(config.YOLO_INPUT_SIZE * config.YOLO_INPUT_SIZE * 3)
 
     cam_rgb.preview.link(yolo_manip.inputImage)
     yolo_manip.out.link(detection_nn.input)
