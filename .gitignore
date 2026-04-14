@@ -1,0 +1,26 @@
+# Virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Large model files (download separately or use Git LFS)
+*.blob
+*.onnx
+*.pt
+*.tflite
+*.msi
+
+# Datasets
+Roboflow*/
+classification Dataset/
+fine_tuning dataset/
+
+# Build artifacts
+final_model_pack/
+final_results/
+sunday_best_saved_model/
+Results/
+
+# IDE
+.vscode/
+.idea/
