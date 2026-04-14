@@ -84,7 +84,7 @@ def build_pipeline():
     # 3. STEREO DEPTH
     # ===========================================================
     stereo = pipeline.create(dai.node.StereoDepth)
-    stereo.setDefaultProfilePreset(dai.node.StereoDepth.PresetMode.HIGH_ACCURACY)
+
     stereo.setLeftRightCheck(config.STEREO_LR_CHECK)
     stereo.setExtendedDisparity(config.STEREO_EXTENDED_DISPARITY)
     stereo.setSubpixel(config.STEREO_SUBPIXEL)

@@ -453,7 +453,7 @@ def _build_preview_pipeline():
     mono_right.setResolution(dai.MonoCameraProperties.SensorResolution.THE_400_P)
 
     stereo = pipeline.create(dai.node.StereoDepth)
-    stereo.setDefaultProfilePreset(dai.node.StereoDepth.PresetMode.HIGH_ACCURACY)
+
     stereo.setDepthAlign(dai.CameraBoardSocket.CAM_A)
     stereo.setExtendedDisparity(config.STEREO_EXTENDED_DISPARITY)
 
