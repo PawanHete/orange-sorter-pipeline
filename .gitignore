@@ -3,12 +3,15 @@ venv/
 __pycache__/
 *.pyc
 
-# Large model files (download separately or use Git LFS)
-*.blob
-*.onnx
+# Block all models by default
+models/*
 *.pt
+*.onnx
 *.tflite
 *.msi
+
+# Only allow the required OAK-D pipeline .blob models
+!models/*.blob
 
 # Datasets
 Roboflow*/
