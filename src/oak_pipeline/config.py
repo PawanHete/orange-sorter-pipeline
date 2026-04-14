@@ -16,7 +16,8 @@ import os
 # Base directory — assumes script is run from project root
 # On Pi: ~/orange_sorter/
 # On Windows: E:\Orange POC\
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR evaluates perfectly to the root directory (orange-sorter-pipeline)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Stage 1: YOLO11n Orange Detector (single-class)
 # Input: [1, 3, 640, 640] — Output: [1, 5, 8400]
